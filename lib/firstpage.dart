@@ -31,7 +31,7 @@ class _homeState extends State<home> {
   @override
   void initState() {
     fetchData();
-    
+
     super.initState();
   }
 
@@ -71,15 +71,24 @@ class _homeState extends State<home> {
                     SizedBox(
                       height: 20,
                     ),
-                    GestureDetector(onTap: () async{
-                       await textprovider.setData(responseData!.ingredients[0].strDescription,responseData!.ingredients[0].strIngredient);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return secondpage();
-                      },));
-                    },
-                      child: Container(height: 300,
+                    GestureDetector(
+                      onTap: () async {
+                        await textprovider.setData(
+                            responseData!.ingredients[0].strDescription,
+                            responseData!.ingredients[0].strIngredient,
+                            responseData!.ingredients[0].strAbv);
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return secondpage();
+                          },
+                        ));
+                      },
+                      child: Container(
+                        height: 300,
                         child: Text(
-                          responseData!.ingredients[0].strDescription.toString(),overflow: TextOverflow.fade,
+                          responseData!.ingredients[0].strDescription
+                              .toString(),
+                          overflow: TextOverflow.fade,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,

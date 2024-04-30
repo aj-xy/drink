@@ -46,6 +46,26 @@ class _secondpageState extends State<secondpage> {
                   provider.data,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "Alcohol % :",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      provider.data3,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                  ],
+                )
               ],
             );
           }),
