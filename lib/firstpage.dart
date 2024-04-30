@@ -77,12 +77,14 @@ class _homeState extends State<home> {
                         return secondpage();
                       },));
                     },
-                      child: Text(
-                        responseData!.ingredients[0].strDescription.toString(),
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                            color: Color.fromRGBO(0, 0, 0, 1)),
+                      child: Container(height: 300,
+                        child: Text(
+                          responseData!.ingredients[0].strDescription.toString(),overflow: TextOverflow.fade,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: Color.fromRGBO(0, 0, 0, 1)),
+                        ),
                       ),
                     ),
                     SizedBox(
