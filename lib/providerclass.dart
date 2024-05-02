@@ -22,6 +22,8 @@ class TextProvider extends ChangeNotifier {
         'https://thecocktaildb.com/api/json/v1/1/search.php?i=${textData}'));
     if (response.statusCode == 200) {
       responseData = cocktailFromJson(response.body);
+    notifyListeners();
+
     } else {
       throw Exception('Failed to load data');
     }

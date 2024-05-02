@@ -72,7 +72,7 @@ class _homeState extends State<home> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,
-                                      color: Color.fromRGBO(245, 167, 167, 1)),
+                                      color: Color.fromRGBO(0, 0, 0, 1)),
                                 );
                               }),
                             ),
