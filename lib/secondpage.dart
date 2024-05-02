@@ -36,14 +36,14 @@ class _secondpageState extends State<secondpage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  provider.data2,
+                  provider.responseData!.ingredients[0].strIngredient,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 Text(
-                  provider.data,
+                  provider.responseData!.ingredients[0].strDescription,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
                 SizedBox(
@@ -60,7 +60,7 @@ class _secondpageState extends State<secondpage> {
                       width: 10,
                     ),
                     Text(
-                      provider.data3,
+                      provider.responseData!.ingredients[0].strAbv,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
